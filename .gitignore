@@ -1,0 +1,12 @@
+loader
+node_modules
+dist
+build
+www
+.yarn
+.stencil
+.angular
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+.env

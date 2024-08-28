@@ -1,0 +1,34 @@
+{
+  "name": "@workspace/components",
+  "version": "0.0.1",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^4.20.0",
+    "@telekom/design-tokens": "1.0.0-beta.11",
+    "classnames": "2.5.1"
+  },
+  "devDependencies": {
+    "@stencil/angular-output-target": "0.8.4",
+    "@stencil/postcss": "2.1.0",
+    "@stencil/react-output-target": "0.5.3",
+    "postcss-custom-media": "11.0.0"
+  },
+  "license": "MIT"
+}

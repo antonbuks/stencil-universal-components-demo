@@ -1,0 +1,73 @@
+{
+  "name": "@workspace/components-angular",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "yarn build.ng",
+    "build.fesm": "rollup --config ./scripts/rollup.config.js",
+    "build.ng": "yarn build.es2015",
+    "build.es2015": "ngc -p tsconfig.json && rollup --config ./scripts/rollup.config.js",
+    "lint": "yarn lint.ts",
+    "lint.ts": "tslint --project .",
+    "lint.fix": "tslint --project . --fix",
+    "test": "jest",
+    "tsc": "tsc -p .",
+    "validate": "yarn && yarn lint && yarn test && yarn build",
+    "format": "prettier --write \"package.json\""
+  },
+  "module": "dist/fesm5.js",
+  "main": "dist/fesm5.js",
+  "types": "dist/core.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@ionic/angular": "^5.3.1",
+    "@workspace/components": "workspace:packages/components",
+    "tslib": "^1.9.3"
+  },
+  "peerDependencies": {
+    "@angular-devkit/core": "^7.2.1",
+    "@angular-devkit/schematics": "^7.2.1",
+    "@angular/common": "^7.2.1",
+    "@angular/compiler": "^7.2.1",
+    "@angular/compiler-cli": "^7.2.1",
+    "@angular/core": "^7.2.1",
+    "@angular/forms": "^7.2.1",
+    "@angular/platform-browser": "^7.2.1",
+    "@angular/platform-browser-dynamic": "^7.2.1",
+    "@angular/router": "^7.2.1",
+    "rxjs": ">=6.2.0",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/core": "^10",
+    "@angular-devkit/schematics": "^10",
+    "@angular/common": "^10",
+    "@angular/compiler": "^10",
+    "@angular/compiler-cli": "^10",
+    "@angular/core": "^10",
+    "@angular/forms": "^10",
+    "@angular/platform-browser": "^10",
+    "@angular/platform-browser-dynamic": "^10",
+    "@angular/router": "^10",
+    "rollup": "4.20.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rxjs": "^6.2.0",
+    "tsickle": "^0.34.0",
+    "tslint": "^5.12.1",
+    "tslint-ionic-rules": "0.0.21",
+    "typescript": "4.0.5",
+    "zone.js": "^0.14.10"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupJest.ts"
+    ]
+  },
+  "__processed_by_ivy_ngcc__": {
+    "main": "9.1.12",
+    "module": "9.1.12",
+    "typings": "9.1.12"
+  }
+}

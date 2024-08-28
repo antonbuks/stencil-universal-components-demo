@@ -1,0 +1,18 @@
+{
+  "name": "workspace-main",
+  "packageManager": "yarn@4.2.2",
+  "scripts": {
+    "build:lib-stencil": "yarn workspace @workspace/components build",
+    "build:lib-angular": "yarn workspace @workspace/components-angular build",
+    "build:lib-react": "yarn workspace @workspace/components-react build",
+    "start:react": "yarn workspace react-starter dev",
+    "start:angular": "yarn workspace angular-starter start",
+    "start": "yarn start:react && yarn start:angular",
+    "build": "yarn build:lib-stencil && yarn build:lib-react && yarn build:lib-angular"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "react-starter",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@workspace/components": "workspace:packages/components",
+    "@workspace/components-react": "workspace:packages/components-react",
+    "react": "17",
+    "react-dom": "17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@types/react": "17",
+    "@types/react-dom": "17",
+    "@vitejs/plugin-react": "^4.3.1",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0"
+  }
+}
